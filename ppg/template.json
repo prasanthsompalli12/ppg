@@ -4,9 +4,11 @@
     "parameters": {
         "ppgName": {
             "type": "string"
+            "value": "prasanthppg"
         },
         "location": {
             "type": "string"
+            "value": "eastus"
         },
         "tagsByResource": {
             "type": "object",
@@ -21,8 +23,6 @@
         {
             "apiVersion": "2019-03-01",
             "type": "Microsoft.Compute/proximityPlacementGroups",
-            "name": "[parameters('ppgName')]",
-            "location": "[parameters('location')]",
             "tags": "[ if(contains(parameters('tagsByResource'), 'Microsoft.Compute/proximityPlacementGroups'), parameters('tagsByResource')['Microsoft.Compute/proximityPlacementGroups'], json('{}')) ]"
         }
     ],
