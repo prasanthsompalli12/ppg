@@ -45,4 +45,4 @@ jobs:
            --name StorageAccountDeployment \
            --resource-group prasanthrg \
            --template-file ppg/template.json \
-           --parameters proximityplacementgroupname=prasanthppg
+           --parameters ppgName=prasanthppg
