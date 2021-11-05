@@ -44,5 +44,5 @@ jobs:
            az deployment group create \
            --name StorageAccountDeployment \
            --resource-group prasanthrg \
-           --template-file ppg\template.json \
+           --template-file ppg/template.json \
            --parameters proximityplacementgroupname=prasanthppg
