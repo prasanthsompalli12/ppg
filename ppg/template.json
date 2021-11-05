@@ -3,12 +3,12 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "ppgName": {
-            "type": "string"
-            "value": "prasanthppg"
+            "type": "string",
+            "defaultValue": "prasanthppg"
         },
         "location": {
-            "type": "string"
-            "value": "eastus"
+            "type": "string",
+            "defaultValue": "eastus"
         },
         "tagsByResource": {
             "type": "object",
