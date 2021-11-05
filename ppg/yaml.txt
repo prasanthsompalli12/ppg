@@ -1,0 +1,48 @@
+on: [push]
+
+
+
+name: AzureARMDeploy
+
+
+
+jobs:
+
+
+
+    deploy:
+
+      runs-on: ubuntu-latest
+
+      steps:
+
+
+
+      - name: Login to Azure
+
+        uses: azure/login@v1
+
+        with:
+
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+         
+
+      - name: checkout source code
+
+        uses: actions/checkout@v1
+
+
+
+      - name: Deeploy ARM Template
+
+        uses: azure/CLI@v1
+
+        with:
+
+          inlineScript: |
+           az deployment group create \
+           --name StorageAccountDeployment \
+           --resource-group githubtestdemo \
+           --template-file ppg\template.json \
+           --parameters proximityplacementgroupname=kiranppg
